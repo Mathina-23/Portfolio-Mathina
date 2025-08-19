@@ -1,0 +1,219 @@
+:root {
+  --primary-background-color: #121212;
+  --secondary-background-color: #1a1a1a;
+  --primary-text-color: #ffffff;
+  --secondary-text-color: #cfcfcf;
+  --accent-color: #0d6efd; /* Bootstrap primary blue */
+}
+body {
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+}
+
+/* Header and Navbar Section*/
+
+/* Navbar background */
+.navbar {
+  background-color: var(--secondary-background-color) !important; /* slightly different from body bg */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* Mobile collapsed menu background */
+.navbar-collapse {
+  background-color: var(--secondary-background-color); /* matches navbar bg */
+  padding: 0.5rem 1rem;
+}
+
+
+.navbar-brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent-color) !important;
+}
+.nav-link {
+  margin-left: 15px;
+}
+/* .navbar .nav-link.active {
+  color: var(--accent-color) !important;
+} */
+.navbar .nav-link {
+  color: var(--primary-text-color) !important;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+.navbar .nav-link:hover {
+  color: var(--accent-color) !important;
+}
+
+
+/* All Sections */
+section {
+  scroll-margin-top: 80px; /* prevents overlap when using anchor links */
+}
+
+
+/* Hero Section */
+#home {
+  padding-top: 4rem; /* space for fixed navbar */
+}
+#home .lead {
+  color: var(--secondary-text-color);
+}
+
+
+#home .btn-light {
+  background-color: var(--primary-text-color);
+  color: var(--primary-background-color);
+  font-weight: 600;
+  transition: 0.3s;
+  border: 0;
+}
+#home .btn-light:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-text-color);
+}
+
+/* Fade-in Animation */
+.animate-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* About Section */
+
+/* Card background matches navbar */
+.bg-navbar {
+  background-color: var(--secondary-background-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+.card .card-body ul.card-list li {
+  padding-left: 20px; /* move inward */
+}
+#about  .card-body {
+  padding-bottom: 0rem;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between icon and text */
+}
+.section-heading i {
+  font-size: 1.5rem;
+}
+
+.row.g-4 {
+  row-gap: 1.5rem; /* reduces big vertical gap */
+}
+@media (min-width: 768px) {
+  .row.g-4 {
+    row-gap: 0; /* no extra gap on desktop */
+  }
+}
+
+
+/* Project Section */
+
+/* Project card */
+.project-card {
+  background-color: var(--secondary-background-color);
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  min-height: 450px; /* increase overall height */
+  display: flex;
+  flex-direction: column;
+}
+.card-text{
+  color: var(--secondary-text-color);
+}
+
+.project-card img {
+  max-height: 250px; /* reduce slightly for balance */
+  object-fit: cover;
+
+}
+.project-card .card-body {
+  color: var(--primary-text-color);
+}
+
+
+.project-card .btn {
+  background-color: var(--primary-text-color);
+  color: var(--primary-background-color);
+  font-weight: 600;
+  border-radius: 30px;
+  border: none;
+  transition: 0.3s;
+}
+.project-card .btn:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-text-color);
+  transform: translateY(-3px);
+}
+
+
+/* Contact Section */
+
+/* Contact cards */
+#contact {
+  padding: 5rem 0; /* Increase vertical spacing */
+  background-color: var(--primary-background-color);
+}
+
+.contact-card {
+  background-color: var(--secondary-background-color);
+  border-radius: 12px;
+  color: var(--primary-text-color);
+  padding: 2rem;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+
+/* Social Links (White icons, blue border) */
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--accent-color); /* Blue border */
+  border-radius: 50%; /* Perfect circle */
+  color: #fff; /* White icon */
+  font-size: 1.3rem;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: var(--accent-color); /* Fill blue */
+  color: #fff; /* Keep icon white */
+  transform: translateY(-3px);
+}
+
+
+/* Footer styling */
+footer {
+  background-color: var(--secondary-background-color);
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--secondary-text-color);
+}
+
+
+
